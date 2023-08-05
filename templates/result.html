@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+  <body>
+    <!-- Create a table to display the reviews -->
+    <div class="table-users">
+      <div class="header">Reviews</div>
+      <table cellspacing="0">
+        <tr>
+          <th>Name </th>
+          <th>Product</th>
+          <th>Rating</th>
+          <th>Title</th>
+          <th width="230">Reviews</th>
+        </tr>
+
+        {% for row in rows %}
+        <tr>
+          <td>{{row[0]}}</td>
+          <td>{{row[1]}}</td>
+          <td>{{row[2]}}</td>
+          <td>{{row[3]}}</td>
+          <td>{{row[4]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <!-- Add the download button -->
+    <form action="{{ url_for('download_csv') }}" method="POST">
+      <input type="hidden" name="filename" value="{{ filename }}">
+      <button type="submit">Download CSV</button>
+    </form>
+
+
+</body>
+
+</html>
