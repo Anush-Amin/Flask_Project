@@ -1,3 +1,6 @@
+# Flipkart review scrapping project using Flask
+
+## Details of step logic for scrpping rating 
 1) Go to the flipkart website with query
 query = "iphone14"
 url = f"https://www.flipkart.com/search?q={query}"
