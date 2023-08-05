@@ -1,5 +1,10 @@
 # Flipkart review scrapping project using Flask
 
+## How it works?
+* In the home page enter the name of the product whose review has to be scrapped
+* The reviews page will be opened which shows 10 reviews
+* You can download the csv which will give you all the reviews (upto 110)
+
 ## Details of step wise logic for scrapping rating 
 1) Go to the flipkart website with query
 query = "iphone14"
